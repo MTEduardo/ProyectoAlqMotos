@@ -29,7 +29,7 @@ public class Reservation implements Serializable {
     @JoinColumn(name = "clientId")
     @JsonIgnoreProperties({"reservations", "messages"})
     private Client client;
-    private Integer score;
+    private String score = "";
 
     public Integer getIdReservation() {
         return idReservation;
@@ -79,11 +79,11 @@ public class Reservation implements Serializable {
         this.client = client;
     }
 
-    public Integer getScore() {
+    public String getScore() {
         return score;
     }
 
-    public void setScore(Integer score) {
+    public void setScore(String score) {
         this.score = score;
     }
 
