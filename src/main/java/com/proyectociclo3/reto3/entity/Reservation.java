@@ -31,6 +31,8 @@ public class Reservation implements Serializable {
     @JoinColumn(name = "clientId")
     @JsonIgnoreProperties({"reservations", "messages"})
     private Client client;
+    
+    private String score;
 
     public Integer getIdReservation() {
         return idReservation;
@@ -68,7 +70,7 @@ public class Reservation implements Serializable {
         return motorbike;
     }
 
-    public void setMotorbike2(Motorbike motorbike2) {
+    public void setMotorbike2(Motorbike motorbike) {
         this.motorbike = motorbike;
     }
 
@@ -78,6 +80,14 @@ public class Reservation implements Serializable {
 
     public void setClient(Client client) {
         this.client = client;
+    }
+
+    public String getScore() {
+        return score;
+    }
+
+    public void setScore(String score) {
+        this.score = score;
     }
 
 }
